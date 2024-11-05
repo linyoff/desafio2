@@ -1,0 +1,15 @@
+{
+  "name": "desafio2",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido como parte do Programa de Bolsas Frontend (React.js), cujo objetivo é criar uma página web (Homepage) utilizando HTML, CSS e JavaScript/Typescript, com base em um dos templates do E-commerce UI Kit no Figma.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

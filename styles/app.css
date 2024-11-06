@@ -1,0 +1,147 @@
+:root {
+    
+  --blue-primary: #23A6F0;         
+  --color-secondary: #23856D;       
+  --color-secondary-button: #2DC071;  
+  --color-alert: #E77C40;
+  --color-alert2: #E74040;
+  --text-color: #252B42;
+  --second-text-color: #737373;
+  --font-primary: 'Montserrat', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+.header {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.top-bar {
+  background-color: #252B42;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #ffffff;
+  padding: 1.02rem;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar h1 {
+  font-size: 1.8em;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.banner {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.banner h2 {
+  font-size: 2.5em;
+}
+
+.banner button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #2db3d1;
+  border: none;
+  cursor: pointer;
+}
+
+.editors-pick, .featured-products, .banner2, .featured-posts {
+  padding: 40px;
+  text-align: center;
+}
+
+.category-item {
+  display: inline-block;
+  padding: 20px;
+  background-color: #eee;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 150px;
+  text-align: center;
+}
+
+.banner2 {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 40px;
+}
+
+.featured-posts .posts {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.post-item {
+  width: 200px;
+  text-align: left;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.footer-columns ul {
+  list-style: none;
+}
+
+.footer-columns a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  color: #252B42;
+}
+

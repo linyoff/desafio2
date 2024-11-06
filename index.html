@@ -1,87 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bandage E-commerce</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="dist/app.js" defer></script>
-</head>
-<body>
-  <!-- Header e Menu -->
-  <header class="header">
-    <div class="menu">
-      <h1 class="logo">Bandage</h1>
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#product">Product</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="menu-icons">
-        <a href="#search"><i class="icon-search">🔍</i></a>
-        <a href="#cart"><i class="icon-cart">🛒</i></a>
-        <a href="#login"><i class="icon-login">👤</i></a>
-      </div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bandage Home</title>
+    <link rel="stylesheet" href="styles/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="dist/app.js" defer></script>
 
-  <!-- Banner Principal -->
-  <section class="banner">
-    <h2 class="banner-title">New Collection</h2>
-    <p class="banner-subtitle">We know how large objects will act, but things on a small scale.</p>
-    <a href="#shop-now" class="banner-btn">Shop Now</a>
+  </head>
+  <body>
+    
+    <div class="top-bar">
+      <p>(255) 555-0118</p>
+      <p>michele.rivera@example.com</p>
+      <p>Follow Us and get a chance to win 80% off</p>
+      <p>Follow Us :</p>
+    </div>
+
+    <header class="header">
+    
+      <div class="menu">
+        <h1 class="logo">Bandage</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-links">
+          <a href="#">Login</a> / <a href="#">Register</a>
+        </div>
+        <div class="menu-icons">
+          <a href="#search"><i class="icon-search"></i></a>
+          <a href="#cart"><i class="icon-cart"></i></a>
+          <a href="#login"><i class="icon-login"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner">
+      <h2 class="banner-title">New Collection</h2>
+      <img src="images/banner1.jpg" />
+      <p class="banner-subtitle">
+        We know how large objects will act, but things on a small scale.
+      </p>
+      <a href="#shop-now" class="banner-btn">Shop Now</a>
+    </section>
+
+    <section class="editors-pick">
+      <h3>Editor's Pick</h3>
+      <div class="pick-categories">
+        <div class="category">
+          <img src="images/man.jpg" alt="Men Category" />
+          <a href="#men">Men</a>
+        </div>
+        <div class="category">
+          <img src="images/woman.jpg" alt="Women Category" />
+          <a href="#women">Women</a>
+        </div>
+        <div class="category">
+          <img src="images/accessories.jpg" alt="Accessories Category" />
+          <a href="#accessories">Accessories</a>
+        </div>
+        <div class="category">
+          <img src="images/kids.jpg" alt="Kids Category" />
+          <a href="#kids">Kids</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h3>Featured Products</h3>
+      <div class="product-list">
+
+        <div class="product-item">
+          <img src="images/produto1.jpg" alt="Product 1" />
+          <h4>Conjunto Neon</h4>
+          <p>Duas peças</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto2.jpg" alt="Product 2" />
+          <h4>T-shirt letras</h4>
+          <p>Uma peça</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto3.jpg" alt="Product 3" />
+          <h4>Mom jeans white</h4>
+          <p>Uma peça</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto4.jpg" alt="Product 4" />
+          <h4>Jaqueta e Vestido</h4>
+          <p>Conjunto</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto5.jpg" alt="Product 5" />
+          <h4>Sobretudo white</h4>
+          <p>Uma peça</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto6.jpg" alt="Product 6" />
+          <h4>Graphic Design</h4>
+          <p>English Department</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto7.jpg" alt="Product 7" />
+          <h4>Graphic Design</h4>
+          <p>English Department</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+        <div class="product-item">
+          <img src="images/produto8.jpg" alt="Product 8"/>
+          <h4>Graphic Design</h4>
+          <p>English Department</p>
+          <p class="price">$19.84 <span class="original-price">$24.00</span></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="banner2">
+      <h3>Vita Classic Product</h3>
+      <p>We know how large objects will act, but things on a small scale.</p>
+      <img src="images/banner2.jpg" alt="Image banner 2">
+      <button>Add to Cart</button>
   </section>
 
-  <!-- Editor's Pick -->
-  <section class="editors-pick">
-    <h3>Editor's Pick</h3>
-    <div class="pick-categories">
-      <div class="category">
-        <img src="images/men.jpg" alt="Men Category">
-        <a href="#men">Men</a>
+  <section class="featured-posts">
+    <h3>Featured Posts</h3>
+    <div class="posts">
+        <div class="post-item">
+            <img src="/images/post-image1.jpg" alt="Post Image 1">
+            <h4>Loudest in La Madisson #1</h4>
+            <p>Google, Trending News</p>
+            <p>Problems trying to resolve the conflict between...</p>
+            <a href="#">Learn More</a>
+        </div>
+        
+        <div class="post-item">
+          <img src="/images/post-image2.jpg" alt="Post Image 2">
+          <h4>Loudest in La Madisson #1</h4>
+          <p>Google, Trending News</p>
+          <p>Problems trying to resolve the conflict between...</p>
+          <a href="#">Learn More</a>
       </div>
-      <div class="category">
-        <img src="images/women.jpg" alt="Women Category">
-        <a href="#women">Women</a>
-      </div>
-      <div class="category">
-        <img src="images/accessories.jpg" alt="Accessories Category">
-        <a href="#accessories">Accessories</a>
-      </div>
-      <div class="category">
-        <img src="images/kids.jpg" alt="Kids Category">
-        <a href="#kids">Kids</a>
-      </div>
+
+      <div class="post-item">
+        <img src="/images/post-image3.jpg" alt="Post Image 3">
+        <h4>Loudest in La Madisson #1</h4>
+        <p>Google, Trending News</p>
+        <p>Problems trying to resolve the conflict between...</p>
+        <a href="#">Learn More</a>
     </div>
-  </section>
 
-  <!-- Produtos em Destaque -->
-  <section class="featured-products">
-    <h3>Featured Products</h3>
-    <div class="product-list">
-      <div class="product-item">
-        <img src="images/product1.jpg" alt="Product 1">
-        <h4>Graphic Design</h4>
-        <p>English Department</p>
-        <p class="price">$19.84 <span class="original-price">$24.00</span></p>
-      </div>
-      <div class="product-item">
-        <img src="images/product2.jpg" alt="Product 2">
-        <h4>Graphic Design</h4>
-        <p>English Department</p>
-        <p class="price">$19.84 <span class="original-price">$24.00</span></p>
-      </div>
-      <!-- Adicione mais produtos conforme necessário -->
     </div>
-  </section>
+</section>
 
-  <footer class="footer">
-    <p>&copy; 2023 Bandage. Todos os direitos reservados.</p>
-  </footer>
 
-  <script src="app.ts"></script>
-</body>
+
+<footer class="footer">
+  <div class="footer-columns">
+      <div>
+          <h4>Company Info</h4>
+          <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">We are hiring</a></li>
+          </ul>
+      </div>
+      <!-- Repeat other footer columns as needed -->
+  </div>
+  <p>&copy; 2024 Bandage. All Rights Reserved.</p>
+</footer>
+
+    
+  </body>
 </html>

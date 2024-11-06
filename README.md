@@ -2,6 +2,12 @@
 
 Projeto desenvolvido como parte do Programa de Bolsas Frontend (React.js), cujo objetivo é criar uma página web (Homepage) utilizando HTML, CSS e JavaScript/Typescript, com base em um dos templates do E-commerce UI Kit no Figma.
 
+Link do protótipo:
+https://www.figma.com/file/409yX6R4voVXSjNV8c4Od6/E-commerce-UI---Figma-Ecommerce-UI-Kit-(Demo-Version)-(Community)?type=design&node
+id=2984-6636&mode=design&t=G62lZJdJ5HsoMqtc-0 
+
+O template escolhido foi o primeiro.
+
 ## Objetivo do Projeto
 
 A proposta do desafio é testar a capacidade de:

@@ -40,22 +40,29 @@ function validateEmail(): boolean {
   return false; //cancela o envio para mostrar a msg
 }
 
-// Interface para definir a estrutura de um banner
+//interface de estrutura de um banner
 interface Banner {
   image: string;
   title: string;
   text: string;
 }
 
-// Seleciona os elementos necessários do HTML
+// Seletores para o primeiro banner
 const bannerImage = document.querySelector<HTMLImageElement>('.banner img');
 const bannerTitle = document.querySelector<HTMLHeadingElement>('.banner-content h2:nth-child(2)');
-const bannerText = document.querySelector<HTMLParagraphElement>('.text-banner');
+const bannerText = document.querySelector<HTMLParagraphElement>('.banner .text-banner');
 const btnPrevious = document.getElementById('btn-ant');
 const btnNext = document.getElementById('btn-next');
 
-// Array com os dados dos banners
-const banners: Banner[] = [
+// Seletores para o segundo banner
+const banner2Image = document.querySelector<HTMLImageElement>('.banner2 img');
+const banner2Title = document.querySelector<HTMLHeadingElement>('.banner2 .product-title');
+const banner2Text = document.querySelector<HTMLParagraphElement>('.banner2 .text-banner');
+const btnPrevious2 = document.getElementById('ant');
+const btnNext2 = document.getElementById('next');
+
+// Dados para os banners
+const banners = [
   {
     image: 'images/banner1.jpg',
     title: 'New Collection',
@@ -68,13 +75,26 @@ const banners: Banner[] = [
   }
 ];
 
-// Índice para controlar o banner atual
-let currentBannerIndex = 0;
+const banners2 = [
+  {
+    image: 'images/banner2.jpg',
+    title: 'Vita Classic Product',
+    text: 'Discover the classic essence of our products.',
+  },
+  {
+    image: 'images/banner2-img2.jpg',
+    title: 'Winter Special',
+    text: 'Enjoy the beauty of winter with our special collection.',
+  }
+];
 
-// Função para atualizar o banner com animação
+// Índices de controle para cada banner
+let currentBannerIndex = 0;
+let currentBanner2Index = 0;
+
+// Função para atualizar o primeiro banner
 function updateBanner(index: number) {
   if (bannerImage && bannerTitle && bannerText) {
-    // Adiciona uma classe para animação de transição
     bannerImage.classList.add('fade');
     bannerTitle.classList.add('fade');
     bannerText.classList.add('fade');
@@ -84,30 +104,68 @@ function updateBanner(index: number) {
       bannerTitle.textContent = banners[index].title;
       bannerText.textContent = banners[index].text;
 
-      // Remove a classe de animação após a atualização
       bannerImage.classList.remove('fade');
       bannerTitle.classList.remove('fade');
       bannerText.classList.remove('fade');
-    }, 500); // Tempo da animação (em milissegundos)
+    }, 800);
   }
 }
 
-//função para ir ao próximo banner
+// Função para atualizar o segundo banner
+function updateBanner2(index: number) {
+  if (banner2Image && banner2Title && banner2Text) {
+    banner2Image.classList.add('fade');
+    banner2Title.classList.add('fade');
+    banner2Text.classList.add('fade');
+
+    setTimeout(() => {
+      banner2Image.src = banners2[index].image;
+      banner2Title.textContent = banners2[index].title;
+      banner2Text.textContent = banners2[index].text;
+
+      banner2Image.classList.remove('fade');
+      banner2Title.classList.remove('fade');
+      banner2Text.classList.remove('fade');
+    }, 800);
+  }
+}
+
+// Funções de navegação para o primeiro banner
 function showNextBanner() {
   currentBannerIndex = (currentBannerIndex + 1) % banners.length;
   updateBanner(currentBannerIndex);
 }
 
-//ouvintes de eventos aos botões
-btnPrevious?.addEventListener('click', () => {
+function showPreviousBanner() {
   currentBannerIndex = (currentBannerIndex - 1 + banners.length) % banners.length;
   updateBanner(currentBannerIndex);
-});
+}
+
+// Funções de navegação para o segundo banner
+function showNextBanner2() {
+  currentBanner2Index = (currentBanner2Index + 1) % banners2.length;
+  updateBanner2(currentBanner2Index);
+}
+
+function showPreviousBanner2() {
+  currentBanner2Index = (currentBanner2Index - 1 + banners2.length) % banners2.length;
+  updateBanner2(currentBanner2Index);
+}
+
+// Eventos de clique para o primeiro banner
+btnPrevious?.addEventListener('click', showPreviousBanner);
 btnNext?.addEventListener('click', showNextBanner);
 
-//exibir o primeiro banner
-updateBanner(currentBannerIndex);
+// Eventos de clique para o segundo banner
+btnPrevious2?.addEventListener('click', showPreviousBanner2);
+btnNext2?.addEventListener('click', showNextBanner2);
 
-//chamando a função para a troca automática dos banners
+// Inicializa os banners
+updateBanner(currentBannerIndex);
+updateBanner2(currentBanner2Index);
+
+// Troca automática dos banners
 setInterval(showNextBanner, 7000);
+setInterval(showNextBanner2, 7000);
+
 

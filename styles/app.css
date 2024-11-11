@@ -150,6 +150,7 @@ header {
   object-fit: cover;
   position: absolute;
   z-index: -1;
+  transition: transform 0.5s ease-in-out;
 }
 
 .banner-content {
@@ -158,6 +159,18 @@ header {
   color: #ffffff;
   z-index: 1;
   margin: 0 auto;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
+}
+
+.slide-active {
+  transform: translateX(0);
 }
 
 .summer {
@@ -202,6 +215,18 @@ header {
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.banner-btn:hover {
+  background-color: #28a745; 
+  transform: scale(1.05); 
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.banner-btn:active {
+  transform: scale(0.95); 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .nav-btn {
@@ -260,6 +285,11 @@ header {
 .category img {
   width: 100%;
   height: auto;
+  transition: 0.7s;
+}
+
+.category img:hover {
+  opacity: 80%;
 }
 
 .text-category {
@@ -466,6 +496,7 @@ header {
   letter-spacing: 0.05rem;
   cursor: pointer;
   margin: 0.5rem 0;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .buy-now {
@@ -479,6 +510,17 @@ header {
   background-color: transparent;
   color: var(--blue-primary);
   border: 2px solid var(--blue-primary);
+}
+
+.buy-now:hover {
+  background-color: var(--color-secondary);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.learn-more:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /*posts*/
@@ -760,7 +802,33 @@ header {
   }
 
   /*banner/carrossel*/
+  .banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .banner-content {
+    position: relative;
+    text-align: left;
+    color: #ffffff;
+    margin: 0 auto;
+  }
+
+  .text-banner {
+    padding: 1rem 8rem 2rem 1rem;
+    margin-right: 35%;
+    text-align: start;
+  }
+
+  #btn-ant {
+    left: 1rem;
+  }
+  
+  #btn-next {
+    right: 1rem;
+  }
 
   /*categorias*/
   .editors-pick {
